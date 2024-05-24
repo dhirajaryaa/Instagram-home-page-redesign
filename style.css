@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --sidebar: #efefef;
+  --bg: #f8f8f8;
+  --overlay: rgb(255, 34, 137);
+  --font: rgb(49, 49, 49);
+  --font2: rgb(22, 22, 22);
+  --font3: gray;
+}
+
+.home{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+/* ================= sidebar start ===================== */
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 350px;
+
+  max-height: 100vh;
+  background-color: var(--sidebar);
+}
+.logo {
+  width: 160px;
+  margin: 20px 30px;
+}
+.user-profile {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+}
+.profile-pic-div,
+.profile-img, .story a, .feed .user-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img , .stories .story a, .feed .user-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--overlay);
+}
+.profile-img img , .stories .story img{
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+}
+
+.user-profile h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--font2);
+}
+.user-profile h3 span img {
+  width: 20px;
+}
+.user-profile .username {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--font);
+}
+
+.follower-info {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all ease-in-out 0.5s;
+}
+.follower-info div{
+    cursor: pointer;
+    width: 90px;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+.follower-info div:hover{
+  background-color: var(--bg);
+}
+.follower-info h4 {
+  color: var(--font2);
+  font-size: 17px;
+  font-weight: 600;
+}
+.follower-info p {
+  color: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ========== navlinks ================ */
+
+.navlinks {
+  margin-left: 20px;
+  width: 93%;
+  height: 400px;
+}
+.navlinks ul li {
+  margin: 20px 0 20px 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.1s;
+}
+.navlinks ul li.active,
+.navlinks ul li:hover {
+  color: var(--overlay);
+  border-right: 3px solid var(--overlay);
+}
+.navlinks ul li i {
+  margin: 0 15px 0 0;
+}
+/* ================= sidebar end ===================== */
+
+/* ================= main start ===================== */
+main{
+   width: 100%;
+  background-color: var(--bg);
+
+}
+.topbar{
+  background-color: var(--bg);
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar .left-box{
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 45px;
+    border-radius: 7px;
+    background-color: var(--sidebar);
+    padding: 3px 10px;
+}
+.topbar .left-box i{
+    color: var(--font);
+   font-size: 22px;
+   margin-right: 10px;
+}
+.topbar .left-box input{
+    all: unset;
+    font-weight: 500;
+    color: var(--font);
+   font-size: 17px;
+}
+.topbar .right-box{
+    display: flex;
+    align-items: center;
+}
+.topbar .right-box a{
+    font-size: 24px;
+    color: var(--font2);
+    padding: 3px 6px;
+    transition: all ease 0.3s;
+}
+.topbar .right-box a:hover{
+   color: var(--overlay);
+}
+.topbar .right-box .action-btn{
+   all: unset;
+   margin-left: 20px;
+   text-align: center;
+   padding: 8px 15px;
+   background-color: var(--overlay);
+   color: var(--bg);
+   border-radius: 10px;
+   border: 2px solid var(--overlay);
+   transition: all ease 0.3s;
+}
+.topbar .right-box .action-btn:hover{
+   background-color: transparent;
+   color: var(--overlay);
+}
+/* ================= main end ===================== */
+
+/* ================= story start ===================== */
+
+.stories-box , .feed{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1% 3%;
+}
+.stories-box .top, .feed .top{
+  max-width: 100%;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.stories-box .top h2, .feed .top h2{
+  color: var(--font2);
+ font-weight: 600;
+}
+.stories-box .top button {
+  all: unset;
+  color: var(--font);
+ font-weight: 600;
+ cursor: pointer;
+}
+.stories-box .top button:hover,.feed .top .btn button:hover{
+  color: var(--font2);
+}
+.stories{
+  max-width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  grid-template-columns: repeat(8, 110px);
+
+}
+/* .stories{
+  display: grid;
+  grid-column-gap: 15px;
+  overflow-y: hidden;
+ 
+  grid-template-columns: repeat(8, 110px);
+
+} */
+.stories .active a{
+  border: 2px dashed var(--overlay);
+}
+
+/* ================= story end ===================== */
+
+/* ================= feed start ===================== */
+.feed .top .btn{
+  margin-right: 20px;
+}
+.feed .top .btn button{
+  all: unset;
+  color: var(--font3);
+ font-weight: 500;
+ cursor: pointer;
+ margin:0 5px;
+}
+.feed .top .btn .active{
+  color: var(--font2);
+}
+
+.feed .left .user-img{
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--overlay);
+  overflow: hidden;
+}
+.feed .user-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.feed .posts{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+.posts .post{
+  width: 300px;
+  height: 350px;  
+}
+.posts .post .post-img{
+  width: 100%;
+  height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.posts .post .post-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post .info, .post .info .left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 2px;
+}
+.post .info .left .profile-name{
+ font-size: 14px;
+ font-weight: 600;
+ margin-left: 5px;
+}
+.post .info .right .btn{
+ all: unset;
+ padding: 5px;
+}
+
+
+/* ================= feed end ===================== */
